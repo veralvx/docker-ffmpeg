@@ -4,8 +4,20 @@ This repo contains two Dockerfiles: `Dockerfile.ffmpeg-dyn` and `Dockerfile.ffmp
 
 This exists primarily because I wanted to have available the `libfdk_aac` library (Fraunhofer FDK AAC) in other projects, such as [audiotame](https://github.com/veralvx/audiotame). It is not shipped with FFmpeg by default due to licensing issues. 
 
-## Build the Image
+## Docker/Podman
 
+```console
+podman build -f Dockerfile.ffmpeg-frozen -t ffmpeg:7.1
 ```
-podman build -f Dockerfile.ffmpeg-frozen -t ffmpeg
+
+Or, pull the image:
+
+```console
+podman pull veralvx/ffmpeg:7.1
+```
+
+Then, run it:
+
+```console
+podman run -it --rm -v $(pwd)/workspace ffmpeg:7.1
 ```
