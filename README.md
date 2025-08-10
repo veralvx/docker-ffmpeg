@@ -7,17 +7,17 @@ This exists primarily because I wanted to have available the `libfdk_aac` librar
 ## Docker/Podman
 
 ```console
-podman build -f Dockerfile.ffmpeg-frozen -t ffmpeg:7.1
+podman build -f Dockerfile.ffmpeg-frozen -t ffmpeg:latest
 ```
 
 Or, pull the image:
 
 ```console
-podman pull veralvx/ffmpeg:7.1
+podman pull veralvx/ffmpeg:latest
 ```
 
 Then, run it:
 
 ```console
-podman run -it --rm -v $(pwd)/workspace ffmpeg:7.1
+podman run -it --rm -v $(pwd)/workspace ffmpeg
 ```
